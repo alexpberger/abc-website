@@ -13,6 +13,7 @@ Keep the writing and the visual design in that register. Prefer clarity, substan
 - Frontend: React and TypeScript, built with Vite, at the repository root.
 - Hosting: Azure Static Web Apps, Free plan, one production environment.
 - CI/CD: GitHub Actions. Pull requests build only. Pushes to `main` build and deploy.
+- Infrastructure: Terraform in `infra/` creates the resource group and the Static Web App. Do not set a repository token on that resource. Azure would add a second workflow. The deploy action records the repository afterwards, and Terraform ignores `repository_branch` and `repository_url`.
 - Local development: Dev Container. Do not require dependencies to be installed on the host.
 - Backend: none. Contact is `mailto:alex@berger.dk`.
 
@@ -47,7 +48,7 @@ Do not add the API, a contact-form backend, or a Vite `/api` proxy until that is
 - Keep local environment files (for example `.env`) out of version control.
 - Add a `.env.example` only where it is useful, with placeholder values and no real secrets. This site does not need one today.
 - Never expose secrets through frontend code, build-time variables, or publicly accessible configuration. Vite variables exposed to the frontend are bundled into public client-side code.
-- Use GitHub Secrets and Azure configuration for the deployment token and for any future backend secrets. The production deploy reads `AZURE_STATIC_WEB_APPS_API_TOKEN`.
+- Use GitHub Secrets and Azure configuration for the deployment token and for any future backend secrets. The production deploy reads `AZURE_STATIC_WEB_APPS_API_TOKEN`. Terraform outputs that token. Store it with `gh secret set`. Never commit it, and never commit Terraform state, which contains it.
 - Follow least privilege when configuring access and permissions.
 
 ## Repository hygiene
@@ -55,7 +56,7 @@ Do not add the API, a contact-form backend, or a Vite `/api` proxy until that is
 - Keep the repository free of generated files, build output, and unnecessary dependencies.
 - Maintain `.gitignore` and `.dockerignore`.
 - Do not commit local development files or machine-specific configuration.
-- `.gitignore` must cover `node_modules/`, `dist/`, `.env`, `.env.*` (with an exception for `.env.example`), and local IDE and operating-system files.
+- `.gitignore` must cover `node_modules/`, `dist/`, `.env`, `.env.*` (with an exception for `.env.example`), Terraform state and `.terraform/`, and local IDE and operating-system files.
 - `/assets/` is gitignored and holds local reference files only: the business card and the full-size masters. The site uses the web-sized files in `src/assets/`. The ignore rule is anchored to the repository root so `src/assets/` stays tracked.
 - The repository is public. Documentation and code must be safe to publish.
 

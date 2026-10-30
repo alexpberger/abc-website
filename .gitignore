@@ -14,6 +14,18 @@ dist/
 # Anchored to the repository root so src/assets/ stays tracked.
 /assets/
 
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

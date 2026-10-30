@@ -9,6 +9,7 @@ The site is a single page. It explains how Alex works with organisations, the th
 - React and TypeScript
 - Vite
 - Azure Static Web Apps (Free plan, production only)
+- Terraform for the Azure resource
 - GitHub Actions
 - Dev Container for local development
 
@@ -39,6 +40,7 @@ Useful scripts:
 ```
 .devcontainer/          Dev Container image and setup
 .github/workflows/      Build, and production deploy on main
+infra/                  Resource group and Static Web App
 public/                 Files copied into the site root, including Static Web Apps headers
 src/assets/             Web-sized logo and portrait, imported from images.ts
 src/components/         Page sections
@@ -49,7 +51,7 @@ assets/                 Local only. Business card and full-size image masters. N
 
 ## Architecture
 
-The browser receives a static site built by Vite. Azure Static Web Apps hosts the `dist/` folder. There is one environment: production. Pull requests run the build and do not deploy. A push to `main` deploys.
+The browser receives a static site built by Vite. Terraform creates one Static Web App, and that app hosts the `dist/` folder. There is one environment: production. Pull requests run the build and do not deploy. A push to `main` deploys.
 
 Contact is a `mailto:` link. A future Azure Functions app can live in `api/` without moving the frontend. Until that exists, the workflow leaves `api_location` empty. Do not put secrets in Vite environment variables. Those values are compiled into the public JavaScript.
 
@@ -67,25 +69,25 @@ Preview environments are not created.
 
 ## Deployment
 
-The workflow is ready to deploy. Creating the Azure resource and the GitHub secret is a separate step, done once.
+Terraform creates the Static Web App. GitHub Actions publishes the site. Run this once, from a machine where the Azure CLI is already signed in and Terraform is installed.
 
-1. Push this repository to GitHub.
-2. In Azure, create a Static Web App:
-   - Plan: Free
-   - Region: West Europe
-   - Deployment source: Other
-3. Open **Manage deployment token** on that resource.
-4. In the GitHub repository, create an Actions secret named `AZURE_STATIC_WEB_APPS_API_TOKEN` and paste the token.
-5. Push to `main`, or run the **Azure Static Web Apps** workflow from `main`.
-6. Copy the site hostname from the Static Web App overview. It looks like `https://<name>.azurestaticapps.net`.
-7. Put that URL in the Live website section below.
+```bash
+cd infra
+terraform init
+terraform apply
+terraform output -raw deployment_token | gh secret set AZURE_STATIC_WEB_APPS_API_TOKEN --repo alexpberger/abc-website
+```
+
+The site is then at `https://` plus the hostname:
+
+```bash
+terraform output -raw hostname
+```
+
+Push to `main`, or run the **Azure Static Web Apps** workflow from `main`, after the secret exists. Pull requests build only.
+
+The deployment token is in the Terraform state on this machine. That state is gitignored. Do not commit it.
 
 ## Live website
 
-The hostname is added here after the first deployment.
-
-Live URL: not deployed yet.
-
-## Homepage
-
-![Alex Berger Consulting homepage](docs/screenshot.png)
+Not deployed yet. After apply, the address is `https://` followed by `terraform output -raw hostname`.
