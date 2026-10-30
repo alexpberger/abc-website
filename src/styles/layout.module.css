@@ -1,0 +1,10 @@
+.inner {
+  width: min(72rem, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+@media (min-width: 720px) {
+  .inner {
+    width: min(72rem, calc(100% - 8rem));
+  }
+}

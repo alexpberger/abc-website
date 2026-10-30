@@ -1,0 +1,24 @@
+.email {
+  display: inline-block;
+  margin-top: 1.35rem;
+  border-bottom: 1px solid var(--accent);
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.email:hover {
+  color: var(--accent);
+}
+
+.github {
+  margin-top: 1.15rem;
+}
+
+.github a {
+  font-weight: 600;
+}

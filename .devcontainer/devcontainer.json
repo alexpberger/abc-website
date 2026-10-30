@@ -1,0 +1,15 @@
+{
+  "name": "Alex Berger Consulting",
+  // Prebuilt image only. Dev Container Features are fetched by the host
+  // and fail behind the local TLS-inspecting proxy; Docker image pulls work.
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+  "remoteUser": "node",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "npm ci"
+}
