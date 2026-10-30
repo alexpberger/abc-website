@@ -11,6 +11,6 @@ variable "name" {
 
 variable "location" {
   type        = string
-  description = "Azure region for the website. West Europe supports the Free plan."
-  default     = "westeurope"
+  description = "Azure region for the website. East US 2 accepts new Free-plan Static Web Apps. West Europe does not."
+  default     = "eastus2"
 }
