@@ -50,7 +50,7 @@ export const site = {
       {
         title: "Production AI",
         subtitle: "Data to intelligent systems",
-        body: "From data pipelines and machine learning to production\u2011ready applications, automation and multi\u2011agent AI systems.",
+        body: "From data pipelines and machine learning to production\u2011ready AI applications and agents.",
       },
       {
         title: "End-to-end delivery",
