@@ -34,10 +34,10 @@ export const site = {
   introduction: {
     id: "about",
     label: "About",
-    title: "From idea through adoption",
+    title: "From strategy to impact.",
     paragraphs: [
-      "I'm Alex Berger. I work with organisations directly, combining senior consulting experience with product thinking and hands-on engineering.",
-      "I take solutions from the idea through implementation and adoption.",
+      "I'm Alex Berger, an independent Data & AI consultant with 10+ years of experience. I've worked with organisations ranging from large financial institutions and public\u2011sector programmes to smaller and medium\u2011sized commercial teams.",
+      "I combine consulting experience, product thinking and hands\u2011on software engineering to turn opportunities into practical solutions and take them through implementation and adoption.",
     ],
   },
   credentials: {
@@ -46,15 +46,18 @@ export const site = {
     items: [
       {
         title: "10+ years",
-        body: "Experience across Data, Analytics, AI and Technology.",
+        subtitle: "Across Data, Analytics & AI",
+        body: "Experience across consulting, banking, the public sector and commercial organisations.",
       },
       {
         title: "Production AI",
-        body: "From machine learning APIs to production multi-agent AI systems.",
+        subtitle: "Data to intelligent systems",
+        body: "From data pipelines and machine learning to production\u2011ready applications, automation and multi\u2011agent AI systems.",
       },
       {
         title: "End-to-end delivery",
-        body: "Combining strategy, product thinking and hands-on engineering.",
+        subtitle: "Strategy through implementation",
+        body: "Combining consulting, product ownership and hands\u2011on software engineering.",
       },
     ],
     certification:
@@ -63,8 +66,15 @@ export const site = {
   contact: {
     id: "contact",
     label: "Contact",
-    title: "Get in touch",
-    lead: "Email is the direct way to start a conversation.",
+    title: "Let's talk",
+    lead: "Have a project, opportunity or idea you'd like to discuss? Get in touch.",
+  },
+  footer: {
+    parts: [
+      "© 2026 Alex Berger Consulting",
+      "CVR 43 54 95 37",
+      "Copenhagen, Denmark",
+    ],
   },
   navigation: [
     { href: "#work", label: "Work" },

@@ -25,6 +25,7 @@
 .copy {
   max-width: 40rem;
   color: var(--ink-muted);
+  text-wrap: balance;
 }
 
 .copy p + p {

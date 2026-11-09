@@ -19,6 +19,7 @@ export function Credentials() {
           {site.credentials.items.map((item) => (
             <li key={item.title}>
               <h3 className={styles.title}>{item.title}</h3>
+              <p className={styles.subtitle}>{item.subtitle}</p>
               <p className={styles.body}>{item.body}</p>
             </li>
           ))}
