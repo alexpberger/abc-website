@@ -63,7 +63,7 @@ export const site = {
     id: "contact",
     label: "Contact",
     title: "Let's talk",
-    lead: "Have a project, opportunity or idea you'd like to discuss? Get in touch.",
+    lead: "Have a project, opportunity or idea you'd like to discuss? Get in touch at",
   },
   footer: {
     parts: [

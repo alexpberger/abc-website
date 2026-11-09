@@ -4,9 +4,27 @@
 }
 
 .inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.15rem;
   padding-block: 1.2rem 1.8rem;
   color: var(--ink-muted);
   font-size: 0.95rem;
+}
+
+.github {
+  display: inline-flex;
+  color: var(--ink-muted);
+}
+
+.github svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.github:hover {
+  color: var(--accent);
 }
 
 .meta {
