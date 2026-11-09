@@ -1,8 +1,6 @@
 # Alex Berger Consulting
 
-Public website for Alex Berger Consulting, an independent Data & AI consultancy.
-
-The site is a single page. It explains how Alex works with organisations, the three main reasons to get in touch, and how to make contact. There is no backend. The contact action is an email link.
+Public website for Alex Berger Consulting, an independent Data & AI consultancy. The site is a single page.
 
 ## Technology
 
