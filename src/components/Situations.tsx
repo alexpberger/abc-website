@@ -16,11 +16,15 @@ export function Situations() {
       <hr className={section.rule} />
       <div className={styles.grid}>
         {site.situations.items.map((item, index) => (
-          <article className={styles.card} key={item.title}>
+          <article className={styles.card} key={item.verb}>
             <p className={styles.index} aria-hidden="true">
               {String(index + 1).padStart(2, "0")}
             </p>
-            <h3 className={styles.title}>{item.title}</h3>
+            <h3 className={styles.title}>
+              {item.verb}
+              <br />
+              {item.object}
+            </h3>
             <p className={styles.body}>{item.body}</p>
           </article>
         ))}

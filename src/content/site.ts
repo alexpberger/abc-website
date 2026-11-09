@@ -15,15 +15,18 @@ export const site = {
     label: "How I can help",
     items: [
       {
-        title: "Accelerate existing initiatives",
+        verb: "Accelerate",
+        object: "delivery",
         body: "Help move existing Data & AI initiatives forward. Provide additional technical capacity, expertise and momentum to projects that are already underway.",
       },
       {
-        title: "Build Data & AI solutions",
+        verb: "Build",
+        object: "Data & AI solutions",
         body: "Design and build solutions ranging from data pipelines and analytical models to production-ready applications and AI products.",
       },
       {
-        title: "Automate complex work",
+        verb: "Automate",
+        object: "complex work",
         body: "Apply AI-powered workflows and Agentic AI to automate complex, information-intensive processes.",
       },
     ],
