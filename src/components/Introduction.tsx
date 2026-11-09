@@ -15,11 +15,7 @@ export function Introduction() {
         <h2 id="about-title" className="section-label">
           {site.introduction.label}
         </h2>
-        <div className={styles.copy}>
-          {site.introduction.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+        <p className={styles.copy}>{site.introduction.body}</p>
       </div>
     </section>
   );

@@ -4,20 +4,9 @@
   text-wrap: balance;
 }
 
-.copy p + p {
-  margin-top: 0.9rem;
-}
-
-/* Two columns once each paragraph keeps a readable measure across the page width. */
-@media (min-width: 900px) {
+@media (min-width: 720px) {
   .copy {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(2.5rem, 4vw, 4.5rem);
-    align-items: start;
-  }
-
-  .copy p + p {
-    margin-top: 0;
+    max-width: 95%;
+    text-wrap: pretty;
   }
 }

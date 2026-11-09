@@ -34,10 +34,7 @@ export const site = {
   introduction: {
     id: "about",
     label: "About",
-    paragraphs: [
-      "I'm Alex Berger, an independent Data & AI consultant with 10+ years of experience. I've worked with organisations ranging from large financial institutions and public\u2011sector programmes to smaller and medium\u2011sized commercial teams.",
-      "I combine consulting experience, product thinking and hands\u2011on software engineering to turn opportunities into practical solutions and take them through implementation and adoption.",
-    ],
+    body: "I'm Alex Berger, an independent Data & AI consultant with 10+ years of experience. I've worked with organisations ranging from large financial institutions and public\u2011sector programmes to smaller and medium\u2011sized commercial teams. I combine consulting experience, product thinking and hands\u2011on software engineering to turn Data & AI opportunities into practical solutions and take them through implementation and adoption.",
   },
   credentials: {
     id: "experience",
