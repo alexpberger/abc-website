@@ -1,6 +1,20 @@
+.section {
+  border-top: 1px solid var(--rule);
+  padding-top: clamp(1.75rem, 3vw, 2.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.title {
+  margin-top: 0.45rem;
+}
+
+.rule {
+  margin: 0.7rem 0 0.65rem;
+}
+
 .email {
   display: inline-block;
-  margin-top: 1.35rem;
+  margin-top: 0.85rem;
   border-bottom: 1px solid var(--accent);
   color: var(--ink);
   font-family: "Newsreader", Georgia, "Times New Roman", serif;
@@ -16,9 +30,53 @@
 }
 
 .github {
-  margin-top: 1.15rem;
+  margin-top: 0.45rem;
 }
 
 .github a {
   font-weight: 600;
+}
+
+@media (min-width: 1100px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 27rem minmax(0, 1fr);
+    column-gap: clamp(3rem, 4vw, 5rem);
+    grid-template-areas:
+      "label ."
+      "title email"
+      "rule github"
+      "lead .";
+    align-items: baseline;
+  }
+
+  .label {
+    grid-area: label;
+  }
+
+  .title {
+    grid-area: title;
+  }
+
+  .rule {
+    grid-area: rule;
+    align-self: start;
+  }
+
+  .lead {
+    grid-area: lead;
+    align-self: start;
+  }
+
+  .email {
+    grid-area: email;
+    margin-top: 0;
+    align-self: baseline;
+  }
+
+  .github {
+    grid-area: github;
+    margin-top: 0.35rem;
+    align-self: start;
+  }
 }
