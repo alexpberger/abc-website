@@ -4,6 +4,8 @@ export const site = {
   mailto: "mailto:alex@berger.dk",
   githubUrl: "https://github.com/alexpberger",
   githubLabel: "github.com/alexpberger",
+  linkedinUrl: "https://www.linkedin.com/in/alex-philip-berger-57a86948/",
+  linkedinLabel: "LinkedIn",
   hero: {
     eyebrow: "Alex Berger Consulting",
     title: "Data & AI, taken through to production.",
@@ -64,6 +66,7 @@ export const site = {
     label: "Contact",
     title: "Let's talk",
     lead: "Have a project, opportunity or idea you'd like to discuss? Get in touch at",
+    follow: ", or connect with me on",
   },
   footer: {
     parts: [

@@ -17,11 +17,21 @@ export function Contact() {
           {site.contact.title}
         </h2>
         <hr className={section.rule} />
-        <p className={section.copy}>
+        <p className={`${section.copy} ${styles.copy}`}>
           {site.contact.lead}{" "}
-          <a className={styles.email} href={site.mailto}>
+          <a className={styles.link} href={site.mailto}>
             {site.email}
-          </a>.
+          </a>
+          {site.contact.follow}{" "}
+          <a
+            className={styles.link}
+            href={site.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {site.linkedinLabel}
+          </a>
+          .
         </p>
       </div>
     </section>

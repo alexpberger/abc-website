@@ -1,10 +1,15 @@
-.email {
+.copy {
+  max-width: none;
+  text-wrap: wrap;
+}
+
+.link {
   color: var(--ink);
   text-decoration: underline;
   text-decoration-color: var(--accent);
   text-underline-offset: 0.18em;
 }
 
-.email:hover {
+.link:hover {
   color: var(--accent);
 }

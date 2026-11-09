@@ -5,29 +5,41 @@
 
 .inner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem 1.15rem;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
   padding-block: 1.2rem 1.8rem;
   color: var(--ink-muted);
   font-size: 0.95rem;
 }
 
-.github {
-  display: inline-flex;
-  color: var(--ink-muted);
+.links {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 0.85rem;
 }
 
-.github svg {
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-muted);
+  line-height: 0;
+  text-decoration: none;
+}
+
+.icon svg {
   width: 1.05rem;
   height: 1.05rem;
 }
 
-.github:hover {
+.icon:hover {
   color: var(--accent);
 }
 
 .meta {
+  min-width: 0;
   margin: 0;
   line-height: 1.5;
 }
