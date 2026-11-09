@@ -7,7 +7,7 @@ export const site = {
   hero: {
     eyebrow: "Alex Berger Consulting",
     title: "Data & AI, taken through to production.",
-    lead: "I help organisations turn Data & AI opportunities into practical, production-ready solutions. You work directly with me.",
+    lead: "I combine consulting experience, product thinking and hands-on engineering to turn opportunities into working solutions.",
     cta: "Get in touch",
   },
   situations: {
@@ -15,7 +15,7 @@ export const site = {
     label: "How I can help",
     items: [
       {
-        title: "Accelerate delivery",
+        title: "Accelerate existing initiatives",
         body: "Help move existing Data & AI initiatives forward. Provide additional technical capacity, expertise and momentum to projects that are already underway.",
       },
       {
