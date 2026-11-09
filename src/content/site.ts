@@ -17,17 +17,17 @@ export const site = {
       {
         verb: "Accelerate",
         object: "delivery",
-        body: "Help move existing Data & AI initiatives forward. Provide additional technical capacity, expertise and momentum to projects that are already underway.",
+        body: "Help move Data & AI initiatives forward with additional technical capacity, expertise and sustained momentum.",
       },
       {
         verb: "Build",
         object: "Data & AI solutions",
-        body: "Design and build solutions ranging from data pipelines and analytical models to production-ready applications and AI products.",
+        body: "Design and build data pipelines, analytical models, applications and AI products that work in production.",
       },
       {
         verb: "Automate",
         object: "complex work",
-        body: "Apply AI-powered workflows and Agentic AI to automate complex, information-intensive processes.",
+        body: "Use AI-powered workflows and agents to automate complex, information-intensive work at scale.",
       },
     ],
   },
