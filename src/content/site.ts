@@ -9,7 +9,7 @@ export const site = {
   hero: {
     eyebrow: "Alex Berger Consulting",
     title: "Data & AI, taken through to production.",
-    lead: "I combine consulting experience, product thinking and hands-on engineering to turn opportunities into working solutions.",
+    lead: "I combine consulting experience, product thinking and hands-on software engineering to turn business opportunities into working solutions.",
     cta: "Get in touch",
   },
   situations: {
