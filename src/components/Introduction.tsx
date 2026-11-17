@@ -16,6 +16,7 @@ export function Introduction() {
           {site.introduction.label}
         </h2>
         <p className={styles.copy}>{site.introduction.body}</p>
+        <p className={styles.copy}>{site.introduction.engagement}</p>
       </div>
     </section>
   );
