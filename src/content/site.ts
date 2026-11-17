@@ -71,7 +71,10 @@ export const site = {
   footer: {
     parts: [
       "© 2026 Alex Berger Consulting",
-      "CVR 43 54 95 37",
+      {
+        text: "CVR 43 54 95 37",
+        href: "https://datacvr.virk.dk/enhed/virksomhed/43549537",
+      },
       "Copenhagen, Denmark",
     ],
   },

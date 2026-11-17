@@ -8,12 +8,26 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`${layout.inner} ${styles.inner}`}>
         <p className={styles.meta}>
-          {site.footer.parts.map((part, index) => (
-            <span key={part}>
-              <span className={styles.part}>{part}</span>
-              {index < site.footer.parts.length - 1 ? "\u00A0· " : null}
-            </span>
-          ))}
+          {site.footer.parts.map((part, index) => {
+            const text = typeof part === "string" ? part : part.text;
+            return (
+              <span key={text}>
+                {typeof part === "string" ? (
+                  <span className={styles.part}>{text}</span>
+                ) : (
+                  <a
+                    className={`${styles.part} ${styles.partLink}`}
+                    href={part.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {text}
+                  </a>
+                )}
+                {index < site.footer.parts.length - 1 ? "\u00A0· " : null}
+              </span>
+            );
+          })}
         </p>
         <div className={styles.links}>
           <a

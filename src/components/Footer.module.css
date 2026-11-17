@@ -47,3 +47,14 @@
 .part {
   white-space: nowrap;
 }
+
+.partLink {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+.partLink:hover {
+  color: var(--accent);
+}
