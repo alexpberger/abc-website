@@ -13,3 +13,53 @@
 .link:hover {
   color: var(--accent);
 }
+
+.cta {
+  display: inline-block;
+  margin-top: 0.9rem;
+}
+
+.columns {
+  display: grid;
+}
+
+.column {
+  min-width: 0;
+}
+
+.column + .column {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+@media (min-width: 900px) {
+  .columns {
+    position: relative;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2.75rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+
+  .columns::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: var(--rule);
+  }
+
+  .column {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+  }
+
+  .column + .column {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
