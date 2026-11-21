@@ -68,7 +68,7 @@ export const site = {
     title: "A working example",
     body: "An AI application for analysing documents and supporting complex investigations.",
     cta: "Explore the demo",
-    href: "https://abc-rag-case-investigator-staging.purplesmoke-fa1b2384.northeurope.azurecontainerapps.io/",
+    href: "https://ca-abc-rag-ln2041.delightfulground-9b227027.eastus2.azurecontainerapps.io/#about",
   },
   contact: {
     id: "contact",
