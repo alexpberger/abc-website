@@ -65,8 +65,8 @@ export const site = {
   },
   demo: {
     label: "Demo",
-    title: "See AI in action.",
-    body: "Explore a working AI application for analysing documents and supporting complex investigations.",
+    title: "A working example",
+    body: "An AI application for analysing documents and supporting complex investigations.",
     cta: "Explore the demo",
     href: "https://abc-rag-case-investigator-staging.purplesmoke-fa1b2384.northeurope.azurecontainerapps.io/",
   },
