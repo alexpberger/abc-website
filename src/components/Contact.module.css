@@ -14,8 +14,8 @@
   color: var(--accent);
 }
 
-.cta {
-  display: inline-block;
+.sameLine {
+  white-space: nowrap;
 }
 
 .columns {

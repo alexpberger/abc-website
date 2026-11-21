@@ -20,15 +20,20 @@ export function Contact() {
             </h2>
             <hr className={section.rule} />
             <div>
-              <p className={`${section.copy} ${styles.copy}`}>{site.demo.body}</p>
-              <a
-                className={`${styles.link} ${styles.cta}`}
-                href={site.demo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {site.demo.cta} <span aria-hidden="true">↗</span>
-              </a>
+              <p className={`${section.copy} ${styles.copy}`}>
+                {site.demo.body.replace(/complex investigations\.$/, "")}
+                <span className={styles.sameLine}>
+                  complex investigations.{" "}
+                  <a
+                    className={styles.link}
+                    href={site.demo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {site.demo.cta} <span aria-hidden="true">↗</span>
+                  </a>
+                </span>
+              </p>
             </div>
           </div>
           <div className={styles.column}>
