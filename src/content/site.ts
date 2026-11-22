@@ -63,6 +63,13 @@ export const site = {
     certification:
       "Microsoft Certified: Azure AI Apps and Agents Developer Associate",
   },
+  demo: {
+    label: "Demo",
+    title: "A practical example",
+    body: "An AI application for analysing documents and supporting complex investigations.",
+    cta: "Explore the demo",
+    href: "https://demo.alexbergerconsulting.dk",
+  },
   contact: {
     id: "contact",
     label: "Contact",
